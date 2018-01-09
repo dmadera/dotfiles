@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Rxvt Color Unicode Terminal
+Comment=Use the command line
+Exec=urxvt
+Icon=/usr/share/icons/Adwaita/48x48/apps/utilities-terminal.png
+Type=Application
+Categories=Utility;TerminalEmulator;
+X-Desktop-File-Install-Version=0.23
