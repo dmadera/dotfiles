@@ -1,9 +1,16 @@
 # Home
 Home directory scripts
 
-## Gnome terminal setup colorscheme
-https://github.com/Mayccoll/Gogh
+## URXVT terminal emulator
+Install URXVT terminal emulator
 ```bash
-sudo apt-get install dconf-cli
-wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
-# choose Solarized Dark (128)
+sudo apt install rxvt-unicode
+```
+
+## Install all dotfiles
+```bash
+git clone git@github.com:daniel-madera/dotfiles.git
+cd dotfiles
+chmod +x install.sh
+./install.sh
+```
