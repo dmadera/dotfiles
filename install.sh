@@ -1,5 +1,5 @@
 echo "Renaming and removing home dirs"
-if [ -d ~/downloads  ] ; then
+if [ ! -d ~/downloads  ] ; then
   rm ~/Documents ~/Pictures ~/Videos -r
   mv ~/Desktop ~/desktop
   mv ~/Downloads ~/downloads
