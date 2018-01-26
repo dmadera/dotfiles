@@ -6,6 +6,12 @@ if [ ! -d ~/downloads  ] ; then
   mv ~/Music ~/media
   mv ~/Public ~/public
   mv ~/Templates ~/templates
+
+  sudo apt install git vim vim-gtk
+  git config --global user.name "Daniel Maděra"
+  git config --global user.email "madera.dan@gmail.com"
+  git config --global core.editor vim
+
 fi
 
 echo "Installing dotfiles to home dir"
