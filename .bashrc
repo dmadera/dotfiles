@@ -199,3 +199,4 @@ export TERM=xterm-256color
   fi
 
   export CDPATH=.:/run/user/1000/gvfs/
+  export PATH=$PATH:/usr/local/cuda/bin/
