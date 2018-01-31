@@ -18,6 +18,7 @@ apt upgrade
 apt install build-essential cmake python-dev python3-dev python3-pip
 apt install ruby ruby-dev git
 apt install vim vim-gtk vim-gnome google-chrome-stable git
+apt install linux-headers-$(uname -r)
 
 su daniel ./install_user.sh
 
@@ -26,4 +27,4 @@ do
   desktop-file-install $f
 done
 
-echo "Done."
+echo "Done. Please reboot your system."
