@@ -202,7 +202,7 @@ export TERM=xterm-256color
 
   watchlog() {
     if [[ -f $1 ]]; then
-      watch -n 2 -c tail -n 80 $1
+      watch -n 1 -c tail -n 25 $1
     else
       echo "usage: watchlog <log_file>"
     fi

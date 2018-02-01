@@ -11,9 +11,9 @@ if [ ! -f /home/daniel/.ssh/id_rsa.pub ]; then
 fi
 
 apt update
-apt upgrade
-apt install vim git
-apt install linux-headers-$(uname -r) sudo
+apt upgrade -y
+apt install vim git -y
+apt install linux-headers-$(uname -r) sudo -y
 
 usermod -a -G sudo daniel
 
