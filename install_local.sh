@@ -18,9 +18,15 @@ apt upgrade
 apt install build-essential cmake python-dev python3-dev python3-pip
 apt install ruby ruby-dev git
 apt install vim vim-gtk vim-gnome google-chrome-stable git
-apt install linux-headers-$(uname -r)
+apt install linux-headers-$(uname -r) sudo rxvt-unicode
+
+usermod -a -G sudo daniel
 
 su daniel ./install_user.sh
+
+cp .bashrc ~/ -fv
+cp .bash_aliases ~/ -fv
+cp .Xdefaults ~/ -fv
 
 for f in .local/share/applications/*.desktop
 do

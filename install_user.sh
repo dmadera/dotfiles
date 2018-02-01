@@ -9,7 +9,7 @@ git config --global core.editor vim
 echo "Installing VIM config"
 cd ~/
 git clone --recursive git@github.com:daniel-madera/.vim.git
-echo ":source ~/.vim/startup.vim" > ~/.vimrc
+echo ":source /home/daniel/.vim/startup.vim" > ~/.vimrc
 
 # set up VIM plugins
 ~/.vim/bundle/YouCompleteMe/install.py

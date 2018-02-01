@@ -184,7 +184,28 @@ export TERM=xterm-256color
     else
       echo "usage: compress <foo.tar.gz> ./foo ./bar"
     fi
+  }
 
+  git_clone() {
+     if [[ -n "$1"  ]]; then
+      git clone git@github.com:daniel-madera/$1.git
+    else
+      echo "usage: git_clone <repo_name>"
+    fi
+  }
+
+  git_init_mining() {
+    cd /opt/mining
+    git init
+    git remote add origin git@github.com:daniel-madera/mining.git
+  }
+
+  watchlog() {
+    if [[ -f $1 ]]; then
+      watch -n 2 -c tail -n 80 $1
+    else
+      echo "usage: watchlog <log_file>"
+    fi
   }
 
   # enable programmable completion features (you don't need to enable
