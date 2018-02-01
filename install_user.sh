@@ -8,7 +8,12 @@ git config --global core.editor vim
 
 echo "Installing VIM config"
 cd ~/
-git clone --recursive git@github.com:daniel-madera/.vim.git
+if [[ ! -d .vim/ ]]; then
+  git clone --recursive git@github.com:daniel-madera/.vim.git
+else
+  cd .vim/ && git pull origin master
+fi
+
 echo ":source /home/daniel/.vim/startup.vim" > ~/.vimrc
 
 # set up VIM plugins

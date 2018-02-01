@@ -8,7 +8,11 @@ git config --global core.editor vim
 
 echo "Installing VIM config"
 cd ~/
-git clone git@github.com:daniel-madera/.vim.git
+if [[ ! -d .vim/ ]]; then
+  git clone git@github.com:daniel-madera/.vim.git
+else
+  cd .vim/ && git pull origin master
+fi
 echo ":source /home/daniel/.vim/startup_remote.vim" > ~/.vimrc
 
 cd $tmp_dir
