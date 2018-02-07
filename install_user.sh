@@ -6,6 +6,11 @@ git config --global user.name "Daniel Maděra"
 git config --global user.email "madera.dan@gmail.com"
 git config --global core.editor vim
 
+if [ ! -f /home/daniel/.ssh/id_rsa.pub  ]; then
+    echo "Generate ssh private/public key and add it to github.com profile"
+    exit 2
+fi
+
 echo "Installing VIM config"
 cd ~/
 if [[ ! -d .vim/ ]]; then

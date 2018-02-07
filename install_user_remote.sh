@@ -9,7 +9,7 @@ git config --global core.editor vim
 echo "Installing VIM config"
 cd ~/
 if [[ ! -d .vim/ ]]; then
-  git clone git@github.com:daniel-madera/.vim.git
+  git clone https://github.com/daniel-madera/.vim.git
 else
   cd .vim/ && git pull origin master
 fi
