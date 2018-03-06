@@ -10,17 +10,13 @@ URxvt.saveLines:            4095
 URxvt.internalBorder:       3
 
 URxvt.allow_bold:           true
-URxvt*font:                 xft:Monospace:pixelsize=16
-URxvt*letterSpace:          -1
+URxvt.font:                 xft:Monospace:pixelsize=16
+URxvt.letterSpace:          -1
 URxvt.scrollBar:            false
 URxvt.urlLauncher:          google-chrome
 
-urxvt.keysym.Home:          \033[1~
-urxvt.keysym.End:           \033[4~
-urxvt.keysym.Control-Up:    \033[1;5A
-urxvt.keysym.Control-Down:  \033[1;5B
-urxvt.keysym.Control-Left:  \033[1;5D
-urxvt.keysym.Control-Right: \033[1;5C]]]]]]
+URxvt.keysym.Home:          \033[1~
+URxvt.keysym.End:           \033[4~
 
 *background:                #002b36
 *foreground:                #657b83
