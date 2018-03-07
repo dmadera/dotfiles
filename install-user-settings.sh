@@ -1,10 +1,13 @@
 #!/bin/bash
+RRED='\e[1;1;31m'
+GREEN='\e[1;1;32m'
+NC='\e[0m'
 
-echo "Installing user's settings"
+echo -e "${GREEN}Installing user's settings${NC}"
 
 setxkbmap -layout cz -variant qwerty
 
-echo "Renaming and removing home dirs"
+# renaming and removing home dirs
 if [ ! -d ~/downloads   ] ; then
   rm ~/Documents ~/Pictures ~/Videos -r
   mv ~/Desktop ~/desktop
@@ -14,7 +17,7 @@ if [ ! -d ~/downloads   ] ; then
   mv ~/Templates ~/templates
 fi
 
-echo "Installing dotfiles to home dir"
+# installing dotfiles to home dir
 cp .bashrc ~/ -fv
 cp .bash_aliases ~/ -fv
 cp .bash_logout ~/ -fv
@@ -30,7 +33,7 @@ git config --global core.editor vim
 dconf load /org/gnome/ < dconf-gnome.dump
 
 cd ~
-echo "Installing VIM config"
+# installing vim config
 if [[ ! -d .vim/  ]]; then
   git clone --recursive https://github.com/daniel-madera/.vim.git
 else
@@ -44,4 +47,3 @@ pip3 install --user powerline-status
 cd  ~/.vim/bundle/command-t
 rake make
 
-echo "Leaving..."
