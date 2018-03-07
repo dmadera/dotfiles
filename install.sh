@@ -26,7 +26,7 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' \
   | tee /etc/apt/sources.list.d/google-chrome.list
 apt install google-chrome-stable -y
 apt install build-essential cmake python-dev python3-dev python3-pip -y
-apt install libc6:i386
+apt install libc6:i386 -y
 apt install ruby ruby-dev git -y
 apt install vim vim-gtk vim-gnome git -y
 apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
