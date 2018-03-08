@@ -13,8 +13,6 @@ cd $(dirname $0)
 
 apt purge evolution* gnome-chess gnome-contacts gnome-keyring gnome-maps \
   gnome-mines gnome-music gnome-robots gnome-sudoku gnome-weather -y
-apt clean -y
-apt autoremove -y
 
 dpkg --add-architecture i386
 apt update
