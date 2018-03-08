@@ -29,16 +29,14 @@ git config --global user.name "Daniel Maděra"
 git config --global user.email "madera.dan@gmail.com"
 git config --global core.editor vim
 
-# load gnome settings
-dconf load /org/gnome/ < dconf-gnome.dump
-
 cd ~
 # installing vim config
-if [[ ! -d .vim/  ]]; then
-  git clone --recursive https://github.com/daniel-madera/.vim.git
-else
-  cd .vim/ && git pull origin master
+if [[ -d .vim/  ]]; then
+  rm .vim/ -rf
 fi
+
+git clone --recursive https://github.com/daniel-madera/.vim.git
+
 echo ":source /home/daniel/.vim/startup.vim" > ~/.vimrc
 
 # set up VIM plugins

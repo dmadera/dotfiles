@@ -12,10 +12,9 @@ run_dir=$PWD
 cd $(dirname $0)
 
 apt purge evolution* gnome-chess gnome-contacts gnome-keyring gnome-maps \
-  gnome-mines gnome-music gnome-online-accounts gnome-online-miners \
-  gnome-robots gnome-sudoku gnome-weather libreoffice* -y
+  gnome-mines gnome-music gnome-robots gnome-sudoku gnome-weather -y
 apt clean -y
-apt autoremove -yd
+apt autoremove -y
 
 dpkg --add-architecture i386
 apt update
@@ -33,7 +32,8 @@ apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
 apt install vlc -y
 update-alternatives --set x-terminal-emulator /usr/bin/urxvt
 
-
+# load gnome settings
+dconf load /org/gnome/ < dconf-gnome.dump
 
 usermod -a -G sudo daniel
 
