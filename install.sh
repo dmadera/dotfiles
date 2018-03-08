@@ -11,7 +11,7 @@ fi
 run_dir=$PWD
 cd $(dirname $0)
 
-apt purge evolution* gnome-chess gnome-contacts gnome-keyring gnome-maps \
+apt remove evolution* gnome-chess gnome-contacts gnome-keyring gnome-maps \
   gnome-mines gnome-music gnome-robots gnome-sudoku gnome-weather -y
 
 dpkg --add-architecture i386
