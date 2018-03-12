@@ -19,16 +19,20 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' \
   | tee /etc/apt/sources.list.d/google-chrome.list
 apt update
 apt upgrade -y
-apt install gdm3 gnome-core google-chrome-stable -y
+apt install gnome-core gdm3 -y
 apt install build-essential cmake python-dev python3-dev python3-pip -y
 apt install libc6:i386 -y
 apt install ruby ruby-dev git -y
+apt install google-chrome-stable -y
 apt install vim vim-gtk vim-gnome git -y
 apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
 apt install vlc -y
 update-alternatives --set x-terminal-emulator /usr/bin/urxvt
 
 usermod -a -G sudo daniel
+
+# load gnome settings
+dconf load /org/gnome/ < ./dconf-gnome.dump
 
 cp .bashrc ~/ -fv
 cp .bash_aliases ~/ -fv
