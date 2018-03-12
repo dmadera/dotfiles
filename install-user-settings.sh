@@ -3,6 +3,8 @@ RRED='\e[1;1;31m'
 GREEN='\e[1;1;32m'
 NC='\e[0m'
 
+set -e
+
 echo -e "${GREEN}Installing user's settings${NC}"
 
 setxkbmap -layout cz -variant qwerty
@@ -16,6 +18,9 @@ if [ ! -d ~/downloads   ] ; then
   mv ~/Public ~/public
   mv ~/Templates ~/templates
 fi
+
+# load gnome settings
+dconf load /org/gnome/ < ./dconf-gnome.dump
 
 # installing dotfiles to home dir
 cp .bashrc ~/ -fv

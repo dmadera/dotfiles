@@ -31,9 +31,6 @@ update-alternatives --set x-terminal-emulator /usr/bin/urxvt
 
 usermod -a -G sudo daniel
 
-# load gnome settings
-dconf load /org/gnome/ < ./dconf-gnome.dump
-
 cp .bashrc ~/ -fv
 cp .bash_aliases ~/ -fv
 cp .Xdefaults ~/ -fv
