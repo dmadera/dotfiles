@@ -17,6 +17,9 @@ if [ ! -d ~/downloads   ] ; then
   mv ~/Templates ~/templates
 fi
 
+# load gnome settings
+dconf load /org/gnome/ < ./dconf-gnome.dump
+
 # installing dotfiles to home dir
 cp .bashrc ~/ -fv
 cp .bash_aliases ~/ -fv

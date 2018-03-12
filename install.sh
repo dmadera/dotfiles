@@ -11,10 +11,6 @@ fi
 run_dir=$PWD
 cd $(dirname $0)
 
-apt purge gnome task-gnome-desktop evolution* libreoffice* -y
-apt clean
-apt autoremove -y
-
 dpkg --add-architecture i386
 
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub \
@@ -31,9 +27,6 @@ apt install vim vim-gtk vim-gnome git -y
 apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
 apt install vlc -y
 update-alternatives --set x-terminal-emulator /usr/bin/urxvt
-
-# load gnome settings
-dconf load /org/gnome/ < dconf-gnome.dump
 
 usermod -a -G sudo daniel
 

@@ -32,24 +32,6 @@ favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop']
 [shell/overrides]
 attach-modal-dialogs=true
 
-[gedit/preferences/ui]
-show-tabs-mode='auto'
-
-[gedit/plugins/filebrowser]
-virtual-root='file:///home/daniel/dotfiles'
-tree-view=true
-root='file:///'
-
-[gedit/plugins]
-active-plugins=['modelines', 'time', 'filebrowser', 'docinfo', 'spell']
-
-[gedit/state/window]
-size=(900, 700)
-state=128
-bottom-panel-size=140
-side-panel-size=200
-side-panel-active-page='GeditWindowDocumentsPanel'
-
 [calculator]
 target-currency=''
 show-zeroes=false
@@ -96,10 +78,6 @@ recreate-folders=true
 sidebar-width=200
 window-height=480
 window-width=600
-
-[evolution-data-server]
-network-monitor-gio-name=''
-migrated=true
 
 [desktop/interface]
 clock-show-date=true
@@ -164,34 +142,7 @@ use-background-color=true
 
 [terminal/legacy]
 schema-version=uint32 3
-
-[evolution/bogofilter]
-command=''
-utf8-for-spam-filter=true
-
-[evolution/spamassassin]
-learn-command=''
-command=''
-local-only=true
-
-[evolution/mail]
-forward-style-name='attached'
-image-loading-policy='never'
-junk-check-incoming=true
-browser-close-on-reply-policy='ask'
-search-gravatar-for-photo=false
-reply-style-name='quoted'
-
-[evolution/calendar]
-work-day-thursday=true
-work-day-sunday=false
 prefer-new-item=''
-work-day-saturday=false
-work-day-tuesday=true
-week-start-day-name='monday'
-work-day-wednesday=true
-work-day-monday=true
-work-day-friday=true
 
 [software]
 check-timestamp=int64 1520312404
