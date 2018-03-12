@@ -26,7 +26,7 @@ apt install ruby ruby-dev git -y
 apt install google-chrome-stable -y
 apt install vim vim-gtk vim-gnome git -y
 apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
-apt install vlc -y
+apt install vlc gimp inkscape -y
 update-alternatives --set x-terminal-emulator /usr/bin/urxvt
 
 usermod -a -G sudo daniel
