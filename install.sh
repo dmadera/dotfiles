@@ -8,6 +8,8 @@ if [ $EUID -ne 0   ]; then
   exit 2
 fi
 
+set -e
+
 run_dir=$PWD
 cd $(dirname $0)
 
@@ -20,12 +22,11 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' \
 apt update
 apt upgrade -y
 apt install gnome-core gdm3 -y
+apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
 apt install build-essential cmake python-dev python3-dev python3-pip -y
 apt install libc6:i386 -y
 apt install ruby ruby-dev git -y
-apt install google-chrome-stable -y
-apt install vim vim-gtk vim-gnome git -y
-apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
+apt install google-chrome-stable task-print-server-y
 apt install vlc gimp inkscape -y
 update-alternatives --set x-terminal-emulator /usr/bin/urxvt
 
