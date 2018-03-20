@@ -22,7 +22,7 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' \
 apt update
 apt upgrade -y
 apt install gnome-core gdm3 -y
-apt install linux-headers-$(uname -r) sudo rxvt-unicode -y
+apt install linux-headers-$(uname -r) sudo rxvt-unicode dirmngr -y
 apt install build-essential cmake python-dev python3-dev python3-pip -y
 apt install libc6:i386 -y
 apt install ruby ruby-dev git -y
