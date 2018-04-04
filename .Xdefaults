@@ -10,7 +10,8 @@ URxvt.saveLines:            4095
 URxvt.internalBorder:       3
 
 URxvt.allow_bold:           true
-URxvt.font:                 xft:Monospace:pixelsize=16
+URxvt.font:                 xft:bitstream vera sans mono:size=12:antialias=true
+URxvt.boldFont:             xft:bitstream vera sans mono:bold:size=12:antialias=true
 URxvt.letterSpace:          -1
 URxvt.scrollBar:            false
 URxvt.urlLauncher:          google-chrome
