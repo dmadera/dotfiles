@@ -13,36 +13,27 @@ set -e
 run_dir=$PWD
 cd $(dirname $0)
 
-dpkg --add-architecture i386
+cat > /etc/yum.repos.d/google-chrome.repo <<EOF
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+EOF
 
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub \
-  | apt-key add -
-echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' \
-  | tee /etc/apt/sources.list.d/google-chrome.list
-apt update
-apt upgrade -y
-apt install gnome-core gdm3 -y
-apt install linux-headers-$(uname -r) sudo rxvt-unicode dirmngr -y
-apt install build-essential cmake python-dev python3-dev python3-pip -y
-apt install libc6:i386 -y
-apt install ruby ruby-dev git -y
-apt install google-chrome-stable task-print-server-y
-apt install vlc gimp inkscape curl -y
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
-apt-get install -y nodejs
-update-alternatives --set x-terminal-emulator /usr/bin/urxvt
-
-usermod -a -G sudo daniel
+dnf upgrade --refresh -y
+dnf install i3 i3status dmenu i3lock xbacklight feh conky -y
+dnf install dnf-plugin-system-upgrade -y
+dnf install google-chrome-stable gimp inkscape curl unzip -y
+dnf install youtube-dl simple-scan -y
+dnf install make automake gcc gcc-c++ kernel-devel -y
+dnf install ruby ruby-devel rubygem-rake python-devel python3-devel -y
 
 cp .bashrc ~/ -fv
 cp .bash_aliases ~/ -fv
 cp .Xdefaults ~/ -fv
 
-su -c ./install-user-settings.sh daniel
-
-for f in .local/share/applications/*.desktop
-do
-  desktop-file-install $f
-done
+su -c ./install-user-settings.sh madera.daniel
 
 echo -e "${RED}Success. Please reboot your system.${NC}"

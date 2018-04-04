@@ -9,8 +9,6 @@ cd $(dirname $0)
 
 echo -e "${GREEN}Installing user's settings${NC}"
 
-setxkbmap -layout cz -variant qwerty
-
 # renaming and removing home dirs
 if [ ! -d ~/downloads   ] ; then
   rm ~/Documents ~/Pictures ~/Videos -r
