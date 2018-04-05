@@ -1,5 +1,4 @@
 #!/bin/bash
-RRED='\e[1;1;31m'
 GREEN='\e[1;1;32m'
 NC='\e[0m'
 
