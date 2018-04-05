@@ -8,19 +8,6 @@ cd $(dirname $0)
 
 echo -e "${GREEN}Installing user's settings${NC}"
 
-# renaming and removing home dirs
-if [ ! -d ~/downloads   ] ; then
-  rm ~/Documents ~/Pictures ~/Videos -r
-  mv ~/Desktop ~/desktop
-  mv ~/Downloads ~/downloads
-  mv ~/Music ~/media
-  mv ~/Public ~/public
-  mv ~/Templates ~/templates
-fi
-
-# load gnome settings
-dconf load /org/gnome/ < ./dconf-gnome.dump
-
 # installing dotfiles to home dir
 cp .bashrc ~/ -fv
 cp .bash_aliases ~/ -fv
