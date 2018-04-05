@@ -31,8 +31,8 @@ shopt -s checkwinsize
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-  debian_chroot=$(cat /etc/debian_chroot)
+if [ -z "${chroot:-}" ] && [ -r /etc/chroot ]; then
+  chroot=$(cat /etc/chroot)
 fi
 
 export TERM=xterm-256color
@@ -54,16 +54,16 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='${chroot:+($chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  PS1='${chroot:+($chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
   xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${chroot:+($chroot)}\u@\h: \w\a\]$PS1"
     ;;
   *)
     ;;
@@ -194,12 +194,6 @@ git_clone() {
   fi
 }
 
-git_init_mining() {
-  cd /opt/mining
-  git init
-  git remote add origin git@github.com:daniel-madera/mining.git
-}
-
 function cpv()
 {
   local DST=${@: -1}                    # last element
@@ -274,3 +268,4 @@ function cpv()
 
   export CDPATH=.:/run/user/1000/gvfs/
   export PATH=$PATH:/usr/local/cuda/bin/
+  export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/:~/.local/lib/python2.7/site-packages/
