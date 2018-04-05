@@ -8,18 +8,29 @@ cd $(dirname $0)
 
 echo -e "${GREEN}Installing user's settings${NC}"
 
-# renaming and removing home dirs
-if [ ! -d ~/downloads   ] ; then
-  rm ~/Documents ~/Pictures ~/Videos -r
-  mv ~/Desktop ~/desktop
-  mv ~/Downloads ~/downloads
-  mv ~/Music ~/media
-  mv ~/Public ~/public
-  mv ~/Templates ~/templates
+# creating home dirs
+if [ ! -d ~/downloads ] ; then
+  mkdir ~/downloads
+fi
+if [ ! -d ~/desktop ] ; then
+  mkdir ~/desktop
+fi
+if [ ! -d ~/media ] ; then
+  mkdir ~/media
+fi
+if [ ! -d ~/public ] ; then
+  mkdir ~/public
+fi
+if [ ! -d ~/templates ] ; then
+  mkdir ~/templates
+fi
+if [ ! -d ~/.config ] ; then
+  mkdir ~/.config
+fi
+if [ ! -d ~/.config/.i3 ] ; then
+  mkdir ~/.config/.i3
 fi
 
-# load gnome settings
-dconf load /org/gnome/ < ./dconf-gnome.dump
 
 # installing dotfiles to home dir
 cp .bashrc ~/ -fv
@@ -27,7 +38,7 @@ cp .bash_aliases ~/ -fv
 cp .bash_logout ~/ -fv
 cp .Xdefaults ~/ -fv
 cp .config/user-dirs.* ~/.config/ -fv
-cp .wallpapers ~/ -fvr
+cp .config/i3/config ~/.config/i3/config -fv
 
 cd ~
 if [[ ! -d ~/.vim/  ]]; then
