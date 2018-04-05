@@ -32,6 +32,8 @@ dnf install cmake make automake gcc gcc-c++ kernel-devel -y
 dnf install ruby ruby-devel rubygem-rake python-devel python3-devel -y
 dnf install ftp -y
 
+pip install --upgrade pip
+
 cp .bashrc ~/ -fv
 cp .bash_aliases ~/ -fv
 cp .Xdefaults ~/ -fv
