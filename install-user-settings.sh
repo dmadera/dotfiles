@@ -27,8 +27,8 @@ fi
 if [ ! -d ~/.config ] ; then
   mkdir ~/.config
 fi
-if [ ! -d ~/.config/.i3 ] ; then
-  mkdir ~/.config/.i3
+if [ ! -d ~/.config/i3 ] ; then
+  mkdir ~/.config/i3
 fi
 
 # installing dotfiles to home dir
