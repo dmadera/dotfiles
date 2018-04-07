@@ -1,0 +1,12 @@
+#!/bin/bash
+bg_dir=~/.wallpapers/
+line=$(xrandr -q | grep Screen)
+width=$(echo ${line} | awk '{ print $8 }')
+height=$(echo ${line} | awk '{ print $10 }' | awk -F"," '{ print $1 }')
+img="$bg_dir/${width}x${height}.png"
+
+if [ ! -f "$img" ]; then
+	img="$bg_dir/forest.jpg"
+fi
+
+i3lock -f -i $img

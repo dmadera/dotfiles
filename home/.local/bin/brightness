@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Usage: brightness [up|down]
+#
+# Requirements: brightnessctl
+
+steps=(0 2 5 9 15 25 40 65 100)
+
+current_brightness=$(brightnessctl g)
+max_brightness=$(brightnessctl m)
+
+steps_brightness=()
+for i in ${steps[@]}; do
+	steps_brightness+=($((max_brightness*i/100)))
+done
+
+case "$1" in
+up)
+	for (( i=${#steps_brightness[@]}-2 ; i >= 0; i-- )); do
+		if [ $current_brightness -ge ${steps_brightness[i]} ]; then
+			brightnessctl s ${steps_brightness[i+1]}
+			break
+		fi
+	done
+	;;
+down)
+	for (( i=1 ; i < ${#steps_brightness[@]} ; i++ )); do
+		if [ $current_brightness -le ${steps_brightness[i]} ]; then
+			brightnessctl s ${steps_brightness[i-1]}
+			break
+		fi
+	done
+	;;
+*)
+	echo "Usage: brightness [up|down]"
+	exit 1
+esac
