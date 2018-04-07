@@ -34,6 +34,7 @@ fi
 # installing dotfiles to home dir
 cp home/. ~/ -a
 
+pip install --user pip
 cd ~
 if [[ ! -d ~/.vim/  ]]; then
   git clone https://github.com/daniel-madera/.vim.git
