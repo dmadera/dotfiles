@@ -1,0 +1,78 @@
+general {
+	output_format = "i3bar"
+	colors = true
+	interval = 5
+}
+
+order += "path_exists vpn"
+order += "vpn_status"
+order += "wireless wlp2s0"
+order += "ethernet enp1s0"
+order += "disk /"
+order += "disk /home"
+order += "cpu_usage"
+order += "load"
+order += "keyboard_layout"
+order += "volume_status"
+order += "battery 0"
+order += "tztime local"
+
+tztime local {
+	format = "%Y-%m-%d %a %H:%M:%S %z"
+}
+
+battery 0 {
+	format = "%status %percentage (%remaining) %consumption"
+	format_down = "No battery"
+	status_chr = "AC"
+	status_bat = "BAT"
+	status_unk = "UNK"
+	status_full = "FULL"
+	integer_battery_capacity = true
+	low_threshold = 30
+	threshold_type = "time"
+	hide_seconds = true
+}
+
+volume_status {
+	command = "amixer"
+	cache_timeout = 1
+	format = "♪ {percentage}%"
+	format_muted = "♪ ({percentage}%)"
+	thresholds = [
+		(0, "#FFFF00"),
+		(1, "#00FF00")
+	]
+	color_muted = "#FFFF00"
+}
+
+cpu_usage {
+	format = "CPU %usage"
+}
+
+disk "/" {
+	format = "/: %avail"
+	low_threshold = 2
+	threshold_type = "gbytes_avail"
+}
+
+disk "/home" {
+	format = "/home: %avail"
+	low_threshold = 10
+	threshold_type = "gbytes_avail"
+}
+
+ethernet enp1s0 {
+	format_up = "E: %ip (%speed)"
+	color_bad = "#ffffff"
+}
+
+wireless wlp2s0 {
+	format_up = "W: %ip (%essid %quality %bitrate)"
+	color_bad = "#ffffff"
+}
+
+vpn_status {
+	format = "{name}|"
+	color_good = "#00ffff"
+}

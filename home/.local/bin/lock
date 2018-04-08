@@ -6,7 +6,7 @@ height=$(echo ${line} | awk '{ print $10 }' | awk -F"," '{ print $1 }')
 img="$bg_dir/${width}x${height}.png"
 
 if [ ! -f "$img" ]; then
-	img="$bg_dir/forest.jpg"
+	img="$bg_dir/1920x1080.png"
 fi
 
 i3lock -f -i $img

@@ -8,14 +8,6 @@ cd $(dirname $0)
 
 echo -e "${GREEN}Installing user's settings${NC}"
 
-# creating home dirs
-if [ ! -d ~/.config ] ; then
-  mkdir ~/.config
-fi
-if [ ! -d ~/.config/i3 ] ; then
-  mkdir ~/.config/i3
-fi
-
 # renaming and removing home dirs
 if [ ! -d ~/downloads ] ; then
   rm ~/Documents ~/Pictures ~/Videos -r
