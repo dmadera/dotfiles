@@ -64,8 +64,15 @@ autorun-never=false
 [desktop/applications/terminal]
 exec='urxvt'
 
+[desktop/screensaver]
+picture-uri='file:///home/daniel/.wallpapers/1920x1080.png'
+color-shading-type='solid'
+primary-color='#000000000000'
+picture-options='stretched'
+secondary-color='#000000000000'
+
 [desktop/background]
-picture-uri='file:///home/dmadera/.wallpapers/forest.jpg'
+picture-uri='file:///home/dmadera/.wallpapers/1920x1080.png'
 primary-color='#02023c3c8888'
 picture-options='stretched'
 
