@@ -1,27 +1,24 @@
 general {
 	output_format = "i3bar"
 	colors = true
-	interval = 5
+	interval = 1
 }
 
-order += "path_exists vpn"
 order += "vpn_status"
 order += "wireless wlp2s0"
 order += "ethernet enp1s0"
 order += "disk /"
 order += "disk /home"
 order += "cpu_usage"
-order += "load"
-order += "keyboard_layout"
 order += "volume_status"
-order += "battery 0"
+order += "battery 1"
 order += "tztime local"
 
 tztime local {
 	format = "%Y-%m-%d %a %H:%M:%S %z"
 }
 
-battery 0 {
+battery 1 {
 	format = "%status %percentage (%remaining) %consumption"
 	format_down = "No battery"
 	status_chr = "AC"
