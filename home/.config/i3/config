@@ -46,7 +46,7 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+ů focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -58,7 +58,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+ů move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -173,18 +173,5 @@ bindsym $mod+Insert exec ~/.local/bin/lock
 # Application keybinding
 bindsym $mod+b exec google-chrome
 
-# Colors
-# class                 border  backgr. text    indicator child_border
-# BEGIN work
-#client.focused          #cc7100 #ff9900 #ffffff #e6e600   #ffad33
-# END work
-# BEGIN personal
-#client.focused          #004d00 #006600 #ffffff #00e600   #009900
-# END personal
-
-
 # Startup scripts / applications
 exec --no-startup-id feh --bg-scale ~/.wallpapers/1920x1080.png
-
-# Iterate through workspaces to unmark them as active
-exec --no-startup-id "sleep 5 && i3-msg 'workspace 7; workspace 4; workspace 5; workspace 6'"
