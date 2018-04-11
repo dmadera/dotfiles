@@ -7,6 +7,7 @@ general {
 order += "vpn_status"
 order += "wireless wlp2s0"
 order += "ethernet enp1s0"
+order += "ethernet enp3s0"
 order += "disk /"
 order += "disk /home"
 order += "cpu_usage"
@@ -61,11 +62,19 @@ disk "/home" {
 
 ethernet enp1s0 {
 	format_up = "E: %ip (%speed)"
+  format_down = ""
+	color_bad = "#ffffff"
+}
+
+ethernet enp3s0 {
+	format_up = "E: %ip (%speed)"
+  format_down = ""
 	color_bad = "#ffffff"
 }
 
 wireless wlp2s0 {
 	format_up = "W: %ip (%essid %quality %bitrate)"
+  format_down = ""
 	color_bad = "#ffffff"
 }
 
