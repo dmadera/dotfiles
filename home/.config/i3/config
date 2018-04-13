@@ -175,3 +175,4 @@ bindsym $mod+b exec google-chrome
 bindsym --release Print exec --no-startup-id "import '~/media/screenshot.png'"
 
 exec_always --no-startup-id feh --bg-scale ~/.wallpapers/1920x1080.png
+exec_always xinput set-prop 13 299 1
