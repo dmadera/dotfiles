@@ -23,9 +23,9 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 EOF
 
 dnf upgrade --refresh -y
-dnf install i3 i3status dmenu i3lock xbacklight feh conky -y
-dnf install pavucontrol xrandr py3status -y
-dnf install dnf-plugin-system-upgrade brightnessctl -y
+# dnf install i3 i3status dmenu i3lock xbacklight feh conky -y
+# dnf install pavucontrol xrandr py3status -y
+# dnf install dnf-plugin-system-upgrade brightnessctl -y
 dnf install rxvt-unicode-256color-ml vim-enhanced -y
 dnf install google-chrome-stable gimp inkscape curl xclip -y
 dnf install youtube-dl simple-scan -y

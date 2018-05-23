@@ -19,7 +19,7 @@ name='Files'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Primary><Alt>t'
-command='rxvt'
+command='urxvt256c-ml'
 name='Terminal'
 
 [settings-daemon/peripherals/keyboard]
@@ -113,7 +113,7 @@ apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop',
 name='X-GNOME-Sundry.directory'
 
 [desktop/screensaver]
-picture-uri='file:///home/daniel/.wallpapers/1920x1080.png'
+picture-uri='file:///home/dmadera/.wallpapers/1920x1080.png'
 color-shading-type='solid'
 primary-color='#000000000000'
 picture-options='stretched'
@@ -129,7 +129,7 @@ show-weekdate=false
 auto-raise=false
 
 [desktop/background]
-picture-uri='file:///home/daniel/.wallpapers/1920x1080.png'
+picture-uri='file:///home/dmadera/.wallpapers/1920x1080.png'
 color-shading-type='solid'
 primary-color='#000000000000'
 picture-options='stretched'
