@@ -27,7 +27,7 @@ dnf upgrade --refresh -y
 # dnf install pavucontrol xrandr py3status -y
 # dnf install dnf-plugin-system-upgrade brightnessctl -y
 dnf install rxvt-unicode-256color-ml vim-enhanced -y
-dnf install google-chrome-stable gimp inkscape curl xclip -y
+dnf install google-chrome-stable gimp inkscape curl xclip okular -y
 dnf install youtube-dl simple-scan -y
 dnf install cmake make automake gcc gcc-c++ kernel-devel -y
 dnf install ruby ruby-devel rubygem-rake python-devel python3-devel -y
