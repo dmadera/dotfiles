@@ -188,7 +188,7 @@ compress() {
 
 git_clone() {
   if [[ -n "$1"  ]]; then
-    git clone git@github.com:daniel-madera/$1.git
+    git clone git@github.com:dmadera/$1.git
   else
     echo "usage: git_clone <repo_name>"
   fi
