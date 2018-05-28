@@ -19,7 +19,7 @@ if [ ! -d ~/downloads ] ; then
 fi
 
 # load desktop settings
-if [ -z "$DESKTOP_SESSION" ] ; then
+if [ ! -z "$DESKTOP_SESSION" ] ; then
   dconf load /org/$DESKTOP_SESSION/ < ./dconf/$DESKTOP_SESSION.dump
 fi
 
