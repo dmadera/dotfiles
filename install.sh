@@ -31,7 +31,7 @@ dnf install google-chrome-stable gimp inkscape curl xclip okular -y
 dnf install youtube-dl simple-scan -y
 dnf install cmake make automake gcc gcc-c++ kernel-devel -y
 dnf install ruby ruby-devel rubygem-rake python-devel python3-devel -y
-dnf install ftp pv p7zip unar unzip nodejs -y
+dnf install ftp pv p7zip unar unzip nodejs wireshark -y
 
 if [ ! -d "/mnt/disk" ]; then
   mkdir /mnt/disk
