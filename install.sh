@@ -26,12 +26,12 @@ dnf upgrade --refresh -y
 # dnf install i3 i3status dmenu i3lock xbacklight feh conky -y
 # dnf install pavucontrol xrandr py3status -y
 # dnf install dnf-plugin-system-upgrade brightnessctl -y
-dnf install rxvt-unicode-256color-ml vim-enhanced -y
+dnf install rxvt-unicode-256color-ml vim-enhanced gvim -y
 dnf install google-chrome-stable gimp inkscape curl xclip okular -y
 dnf install youtube-dl simple-scan -y
 dnf install cmake make automake gcc gcc-c++ kernel-devel -y
 dnf install ruby ruby-devel rubygem-rake python-devel python3-devel -y
-dnf install ftp pv p7zip unar unzip nodejs wireshark -y
+dnf install ftp pv p7zip unar unzip nodejs wireshark ffmpeg -y
 
 if [ ! -d "/mnt/disk" ]; then
   mkdir /mnt/disk
