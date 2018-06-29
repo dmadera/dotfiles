@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=urxvt
+Comment=A VT102 emulator for the X window system
+Exec=urxvt256c-ml
+Terminal=true
+Type=Application
+Icon=utilities-terminal
+Categories=System;TerminalEmulator;
+StartupWMClass=URxvt
+X-Desktop-File-Install-Version=0.23
