@@ -21,6 +21,7 @@ alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 
 alias cls='clear'
+alias vim='gvim -v'
 
 alias flushdns='dscacheutil -flushcache'
 alias o='xdg-open &>/dev/null'
