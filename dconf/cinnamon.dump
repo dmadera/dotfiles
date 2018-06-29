@@ -1,26 +1,32 @@
 [/]
-desktop-effects-close-effect='traditional'
-panels-height=['1:25']
-desktop-effects-tile-time=100
-desktop-effects-maximize-effect='none'
-desktop-effects-close-transition='easeOutQuad'
-desktop-effects-minimize-effect='traditional'
-desktop-effects-tile-effect='none'
-desktop-effects-unmaximize-time=100
+desktop-effects-unmaximize-transition='easeNone'
 desktop-effects-maximize-transition='easeInExpo'
+desktop-effects-map-effect='traditional'
+workspace-osd-duration=400
+desktop-effects-close-effect='traditional'
+enabled-desklets=@as []
+desktop-effects-unmaximize-time=100
+desktop-effects-map-time=175
+desktop-effects-minimize-effect='traditional'
+panels-height=['1:25']
+next-applet-id=16
+panel-launchers=['DEPRECATED']
 desktop-effects-map-transition='easeOutQuad'
 desktop-effects-maximize-time=100
-desktop-effects-map-time=175
-enabled-applets=['panel1:right:0:systray@cinnamon.org:0', 'panel1:left:0:menu@cinnamon.org:1', 'panel1:left:1:show-desktop@cinnamon.org:2', 'panel1:left:2:panel-launchers@cinnamon.org:3', 'panel1:left:3:window-list@cinnamon.org:4', 'panel1:right:1:keyboard@cinnamon.org:5', 'panel1:right:2:notifications@cinnamon.org:6', 'panel1:right:3:removable-drives@cinnamon.org:7', 'panel1:right:4:user@cinnamon.org:8', 'panel1:right:5:network@cinnamon.org:9', 'panel1:right:6:blueberry@cinnamon.org:10', 'panel1:right:7:power@cinnamon.org:11', 'panel1:right:8:calendar@cinnamon.org:12', 'panel1:right:9:sound@cinnamon.org:13']
-next-applet-id=14
-desktop-effects-close-time=175
-desktop-effects-map-effect='traditional'
-desktop-effects-minimize-time=200
-desktop-effects-tile-transition='easeInQuad'
-desktop-effects-minimize-transition='easeInQuad'
-desktop-effects-unmaximize-transition='easeNone'
-panel-launchers=['DEPRECATED']
 desktop-effects-unmaximize-effect='none'
+desktop-effects-tile-transition='easeInQuad'
+desktop-effects-maximize-effect='none'
+enabled-applets=['panel1:right:1:systray@cinnamon.org:0', 'panel1:left:0:menu@cinnamon.org:1', 'panel1:right:10:show-desktop@cinnamon.org:2', 'panel1:left:2:panel-launchers@cinnamon.org:3', 'panel1:left:3:window-list@cinnamon.org:4', 'panel1:right:2:removable-drives@cinnamon.org:7', 'panel1:right:3:user@cinnamon.org:8', 'panel1:right:4:network@cinnamon.org:9', 'panel1:right:5:power@cinnamon.org:11', 'panel1:right:9:calendar@cinnamon.org:12', 'panel1:right:6:sound@cinnamon.org:13', 'panel1:right:7:windows-quick-list@cinnamon.org:14', 'panel1:right:8:workspace-switcher@cinnamon.org:15']
+desktop-effects-minimize-time=200
+desktop-effects-minimize-transition='easeInQuad'
+desktop-effects-tile-effect='none'
+desktop-effects-close-transition='easeOutQuad'
+panel-edit-mode=false
+workspace-osd-x=50
+workspace-osd-y=50
+desktop-effects-close-time=175
+favorite-apps=['google-chrome.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop']
+desktop-effects-tile-time=100
 
 [settings-daemon/plugins/power]
 sleep-display-battery=1800
@@ -36,14 +42,39 @@ motion-threshold=1
 [settings-daemon/peripherals/keyboard]
 repeat-interval=uint32 30
 delay=uint32 500
+numlock-state='off'
 
 [settings-daemon/peripherals/mouse]
 drag-threshold=8
 motion-threshold=1
 double-click=400
 
+[sounds]
+logout-enabled=false
+map-enabled=false
+maximize-enabled=false
+login-enabled=false
+switch-enabled=false
+tile-enabled=false
+minimize-enabled=false
+unplug-enabled=false
+close-enabled=false
+plug-enabled=false
+unmaximize-enabled=false
+
 [muffin]
 tile-hud-threshold=25
+
+[desktop/interface]
+cursor-size=24
+first-day-of-week=1
+gtk-im-module='gtk-im-context-simple:xim'
+toolkit-accessibility=false
+clock-show-seconds=true
+cursor-blink-time=1200
+icon-theme='Paper'
+gtk-theme='Adapta-Nokto-Eta'
+clock-show-date=true
 
 [desktop/keybindings/custom-keybindings/custom1]
 binding=['<Primary><Alt>e']
@@ -61,15 +92,37 @@ custom-list=['custom0', 'custom1']
 [desktop/media-handling]
 autorun-never=false
 
-[desktop/applications/terminal]
-exec='urxvt'
-
 [desktop/screensaver]
 picture-uri='file:///home/daniel/.wallpapers/1920x1080.png'
 color-shading-type='solid'
 primary-color='#000000000000'
 picture-options='stretched'
 secondary-color='#000000000000'
+
+[desktop/applications/terminal]
+exec='urxvt'
+
+[desktop/notifications]
+fade-opacity=40
+display-notifications=false
+
+[desktop/wm/preferences]
+theme='Adapta-Nokto'
+
+[desktop/a11y/applications]
+screen-keyboard-enabled=false
+screen-reader-enabled=false
+
+[desktop/a11y/mouse]
+secondary-click-enabled=false
+secondary-click-time=1.2
+dwell-time=1.2
+dwell-threshold=10
+dwell-click-enabled=false
+
+[desktop/sound]
+volume-sound-enabled=false
+event-sounds=false
 
 [desktop/background]
 picture-uri='file:///home/dmadera/.wallpapers/1920x1080.png'
@@ -81,31 +134,5 @@ image-source='directory:///home/dmadera/.wallpapers'
 delay=15
 slideshow-enabled=false
 
-[desktop/interface]
-clock-show-date=true
-cursor-size=24
-cursor-blink-time=1200
-clock-show-seconds=true
-first-day-of-week=1
-gtk-im-module='gtk-im-context-simple:xim'
-
-[desktop/sound]
-volume-sound-enabled=false
-event-sounds=false
-
-[desktop/notifications]
-fade-opacity=40
-display-notifications=false
-
-[sounds]
-logout-enabled=false
-map-enabled=false
-maximize-enabled=false
-login-enabled=false
-switch-enabled=false
-tile-enabled=false
-minimize-enabled=false
-unplug-enabled=false
-close-enabled=false
-plug-enabled=false
-unmaximize-enabled=false
+[theme]
+name='cinnamon'
