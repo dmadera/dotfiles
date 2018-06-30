@@ -16,12 +16,15 @@ if [ ! -d ~/downloads ] ; then
   mv ~/Music ~/media
   mv ~/Public ~/public
   mv ~/Templates ~/templates
+  mkdir ~/workspace
 fi
 
 # load desktop settings
-if [ ! -z "$DESKTOP_SESSION" ] ; then
-  dconf load /org/$DESKTOP_SESSION/ < ./dconf/$DESKTOP_SESSION.dump
-fi
+for f in ./dconf/*.dump do
+  env=${f#*dconf/}
+  env=${env%.dump}
+  dconf load /org/$env/ < $f
+done
 
 # installing dotfiles to home dir
 cp home/. ~/ -a

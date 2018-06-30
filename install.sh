@@ -13,25 +13,21 @@ set -e
 run_dir=$PWD
 cd $(dirname $0)
 
-cat > /etc/yum.repos.d/google-chrome.repo <<EOF
-[google-chrome]
-name=google-chrome
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
-enabled=1
-gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+cat > /etc/apt/sources.list.d/google-chrome.list <<EOF
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 EOF
 
-dnf upgrade --refresh -y
-# dnf install i3 i3status dmenu i3lock xbacklight feh conky -y
-# dnf install pavucontrol xrandr py3status -y
-# dnf install dnf-plugin-system-upgrade brightnessctl -y
-dnf install rxvt-unicode-256color-ml vim-enhanced gvim -y
-dnf install google-chrome-stable gimp inkscape curl xclip okular -y
-dnf install youtube-dl simple-scan -y
-dnf install cmake make automake gcc gcc-c++ kernel-devel -y
-dnf install ruby ruby-devel rubygem-rake python-devel python3-devel -y
-dnf install ftp pv p7zip unar unzip nodejs wireshark ffmpeg -y
+apt-get update
+apt-get install rxvt-unicode-256color -y
+apt-get install vim vim-gtk vim-youcompleteme vim-snippets vim-command-t -y
+apt-get install vim-autopep8 -y
+apt-get install google-chrome-stable gimp inkscape curl xclip okular -y
+apt-get install youtube-dl simple-scan -y
+apt-get install cmake make automake gcc gcc-c++ kernel-devel -y
+apt-get install ruby ruby-devel rubygem-rake python-devel python3-devel -y
+apt-get install ftp pv p7zip unar unzip nodejs wireshark ffmpeg -y
+apt-get upgrade dist-upgrade
 
 if [ ! -d "/mnt/disk" ]; then
   mkdir /mnt/disk

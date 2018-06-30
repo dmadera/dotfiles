@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=urxvt
 Comment=A VT102 emulator for the X window system
-Exec=urxvt256c-ml
+Exec=urxvt256c
 Terminal=true
 Type=Application
 Icon=utilities-terminal
