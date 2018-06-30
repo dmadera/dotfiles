@@ -20,6 +20,7 @@ alias lm='ls -la | less'
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 
+alias vim='gvim -v'
 alias cls='clear'
 
 alias flushdns='dscacheutil -flushcache'

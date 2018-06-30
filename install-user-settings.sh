@@ -20,7 +20,8 @@ if [ ! -d ~/downloads ] ; then
 fi
 
 # load desktop settings
-for f in ./dconf/*.dump do
+for f in ./dconf/*.dump 
+do
   env=${f#*dconf/}
   env=${env%.dump}
   dconf load /org/$env/ < $f
@@ -29,7 +30,6 @@ done
 # installing dotfiles to home dir
 cp home/. ~/ -a
 
-pip install --user pip
 cd ~
 if [[ ! -d ~/.vim/  ]]; then
   git clone https://github.com/daniel-madera/.vim.git

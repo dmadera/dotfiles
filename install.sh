@@ -18,16 +18,16 @@ cat > /etc/apt/sources.list.d/google-chrome.list <<EOF
 deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 EOF
 
-apt-get update
-apt-get install rxvt-unicode-256color -y
-apt-get install vim vim-gtk vim-youcompleteme vim-snippets vim-command-t -y
-apt-get install vim-autopep8 -y
-apt-get install google-chrome-stable gimp inkscape curl xclip okular -y
-apt-get install youtube-dl simple-scan -y
-apt-get install cmake make automake gcc gcc-c++ kernel-devel -y
-apt-get install ruby ruby-devel rubygem-rake python-devel python3-devel -y
-apt-get install ftp pv p7zip unar unzip nodejs wireshark ffmpeg -y
-apt-get upgrade dist-upgrade
+apt update
+apt install rxvt-unicode-256color -y
+apt install vim vim-gtk vim-youcompleteme vim-snippets vim-command-t -y
+apt install vim-autopep8 -y
+apt install google-chrome-stable gimp inkscape xclip okular -y
+apt install youtube-dl simple-scan -y
+apt install cmake make automake gcc -y
+apt install nodejs wireshark-qt ffmpeg -y
+apt upgrade 
+apt dist-upgrade
 
 if [ ! -d "/mnt/disk" ]; then
   mkdir /mnt/disk
