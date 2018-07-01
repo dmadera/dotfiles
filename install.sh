@@ -23,10 +23,10 @@ apt install rxvt-unicode-256color -y
 apt install vim vim-gtk vim-youcompleteme vim-snippets vim-command-t -y
 apt install vim-autopep8 -y
 apt install google-chrome-stable gimp inkscape xclip okular -y
-apt install youtube-dl simple-scan -y
+apt install youtube-dl simple-scan pv -y
 apt install cmake make automake gcc -y
 apt install nodejs wireshark-qt ffmpeg -y
-apt upgrade 
+apt upgrade
 apt dist-upgrade
 
 if [ ! -d "/mnt/disk" ]; then
