@@ -2,8 +2,9 @@
 desktop-effects-unmaximize-transition='easeNone'
 desktop-effects-maximize-transition='easeInExpo'
 desktop-effects-map-effect='traditional'
-workspace-osd-duration=400
+command-history=['gksudo gedit /etc/default/grub', 'sudo gedit /etc/default/grub']
 desktop-effects-close-effect='traditional'
+workspace-osd-duration=400
 enabled-desklets=@as []
 desktop-effects-unmaximize-time=100
 desktop-effects-map-time=175
@@ -31,18 +32,22 @@ favorite-apps=['google-chrome.desktop', 'org.gnome.Terminal.desktop', 'nemo.desk
 desktop-effects-tile-time=100
 
 [settings-daemon/plugins/power]
-sleep-display-battery=1800
-lid-close-battery-action='suspend'
-sleep-display-ac=1800
-lid-close-ac-action='suspend'
+button-power='suspend'
+critical-battery-action='nothing'
+lid-close-suspend-with-external-monitor=false
+sleep-inactive-battery-timeout=0
+lid-close-ac-action='nothing'
+lid-close-battery-action='nothing'
 sleep-inactive-ac-timeout=0
-sleep-inactive-battery-timeout=1800
+sleep-display-ac=1800
+sleep-display-battery=1800
 
 [settings-daemon/plugins/xsettings]
 menus-have-icons=true
 
 [settings-daemon/peripherals/touchpad]
 motion-threshold=1
+touchpad-enabled=true
 
 [settings-daemon/peripherals/keyboard]
 repeat-interval=uint32 30
@@ -84,7 +89,7 @@ clock-show-date=true
 
 [desktop/keybindings/custom-keybindings/custom1]
 binding=['<Primary><Alt>e']
-command='nautilus'
+command='nemo'
 name='Files'
 
 [desktop/keybindings/custom-keybindings/custom0]
@@ -95,8 +100,11 @@ name='Browser'
 [desktop/keybindings]
 custom-list=['custom0', 'custom1']
 
+[desktop/keybindings/media-keys]
+home=['<Primary><Alt>e', 'XF86Explorer']
+
 [desktop/media-handling]
-autorun-never=false
+autorun-never=true
 
 [desktop/screensaver]
 picture-uri='file:///home/daniel/.wallpapers/1920x1080.png'
