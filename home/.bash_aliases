@@ -20,7 +20,7 @@ alias lm='ls -la | less'
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 
-alias cp="rsync -ah --progress"
+alias cpv="rsync -ah --progress"
 alias vim='gvim -v'
 alias cls='clear'
 
