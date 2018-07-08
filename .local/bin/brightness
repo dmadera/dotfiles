@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# Usage: brightness [up|down]
+#
+# Requirements: xbacklight
+
+steps=(0 2 5 9 15 25 40 65 100)
+
+current_brightness=$(printf "%.0f" $(xbacklight -get))
+
+case "$1" in
+up)
+	for (( i=${#steps[@]}-2 ; i >= 0; i-- )); do
+		if [ $current_brightness -ge ${steps[i]} ]; then
+			xbacklight -set ${steps[i+1]}
+			break
+		fi
+	done
+	;;
+down)
+	for (( i=1 ; i < ${#steps[@]} ; i++ )); do
+		if [ $current_brightness -le ${steps[i]} ]; then
+			xbacklight -set ${steps[i-1]}
+			break
+		fi
+	done
+	;;
+*)
+	echo "Usage: brightness [up|down]"
+	exit 1
+esac
