@@ -161,8 +161,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id ~/.local/bin/brightness down
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/audio up
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/audio down 
-bindsym XF86AudioMute exec --no-startup-id ~/.local/bin/audio mute 
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/audio down
+bindsym XF86AudioMute exec --no-startup-id ~/.local/bin/audio mute
 
 # Screenlock
 bindsym $mod+Insert exec ~/.local/bin/lock
@@ -170,4 +170,4 @@ bindsym $mod+Insert exec ~/.local/bin/lock
 # Application keybinding
 bindsym $mod+b exec chromium
 
-exec_always --no-startup-id feh --bg-scale ~/.wallpapers/1920x1080.png
+exec --no-startup-id feh --bg-scale ~/.wallpapers/1920x1080.png
