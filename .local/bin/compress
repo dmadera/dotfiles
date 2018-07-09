@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Usage: compress <foo.tar.gz> ./foo ./bar
+#
+# Requirements: tar zip rar
+
+if [[ -n "$1"  ]]; then
+    FILE=$1
+    case $FILE in
+        *.tar ) shift && tar cf $FILE $* ;;
+        *.tar.bz2 ) shift && tar cjf $FILE $* ;;
+        *.tar.gz ) shift && tar czf $FILE $* ;;
+        *.tgz ) shift && tar czf $FILE $* ;;
+        *.zip ) shift && zip $FILE $* ;;
+        *.7z ) shift && 7z a $FILE $* ;;
+    esac
+else
+    echo "usage: compress <foo.tar.gz> ./foo ./bar"
+fi

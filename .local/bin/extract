@@ -1,0 +1,65 @@
+#!/bin/bash
+#
+# Usage: extract <foo.tar.gz>
+#
+# Requirements: tar unzip unrar 7zip
+
+clrstart="\033[1;34m"  #color codes
+clrend="\033[0m"
+
+if [[ "$#" -lt 1  ]]; then
+    echo -e "${clrstart}Pass a filename.${clrend}"
+    exit 1 #not enough args
+fi
+
+if [[ ! -e "$1"  ]]; then
+    echo -e "${clrstart}File does not exist!${clrend}"
+    exit 2 #file not found
+fi
+
+filename=`basename "$1"`
+
+if [[ ! -d "$filename" ]]; then
+    mkdir "$filename"
+fi
+
+d=$filename
+
+case "${filename##*.}" in
+    tar)
+        echo -e "${clrstart}Extracting $1 to $DESTDIR: (uncompressed tar)${clrend}"
+        tar -xf "$1" -C "$d"
+        ;;
+    gz)
+        echo -e "${clrstart}Extracting $1 to $DESTDIR: (gip compressed tar)${clrend}"
+        tar -xfz "$1" -C "$d"
+        ;;
+    tgz)
+        echo -e "${clrstart}Extracting $1 to $DESTDIR: (gip compressed tar)${clrend}"
+        tar -xfz "$1" -C "$d"
+        ;;
+    xz)
+        echo -e "${clrstart}Extracting  $1 to $DESTDIR: (gip compressed tar)${clrend}"
+        tar -xf -J "$1" -C "$d"
+        ;;
+    bz2)
+        echo -e "${clrstart}Extracting $1 to $DESTDIR: (bzip compressed tar)${clrend}"
+        tar -xfj "$1" -C "$d"
+        ;;
+    zip)
+        echo -e "${clrstart}Extracting $1 to $DESTDIR: (zipp compressed file)${clrend}"
+        unzip "$1" -d "$d"
+        ;;
+    rar)
+        echo -e "${clrstart}Extracting $1 to $DESTDIR: (rar compressed file)${clrend}"
+        unrar x "$1" "$d"
+        ;;
+    7z)
+        echo -e  "${clrstart}Extracting $1 to $DESTDIR: (7zip compressed file)${clrend}"
+        7za e -o "$d" "$1"
+        ;;
+    *)
+        echo -e "${clrstart}Unknown archieve format!"
+        exit 5
+        ;;
+esac
