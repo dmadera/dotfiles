@@ -1,1 +1,24 @@
+/.Xauthority
+/.bash_history
+/.cache/
 
+/.esd_auth
+/.gnupg/
+/.lesshst
+/.npm/
+/.pki/
+/.ssh/
+/.gnome/
+/.viminfo
+/.local/share/
+
+/.config/aurman/
+/.config/chromium/
+/.config/configstore/
+/.config/dconf/
+/.config/menus/
+/.config/pulse/
+/.config/teamviewer/
+
+/downloads/
+/workspace/
