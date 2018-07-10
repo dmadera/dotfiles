@@ -125,34 +125,34 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+    bindsym j resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
         bindsym l resize shrink height 5 px or 5 ppt
         bindsym semicolon resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
+# same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
 
-        # back to normal: Enter or Escape
+# back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+#bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command py3status -c ~/.config/i3status/config
+    status_command py3status -c ~/.config/i3status/config
 }
 
 # Multimedia keys - brightness
@@ -164,10 +164,23 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/audio up
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/audio down
 bindsym XF86AudioMute exec --no-startup-id ~/.local/bin/audio mute
 
-# Screenlock
-bindsym $mod+Insert exec ~/.local/bin/lock
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (delete) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/.local/bin/i3exit lock, mode "default"
+        bindsym e exec --no-startup-id ~/.local/bin/i3exit logout, mode "default"
+        bindsym s exec --no-startup-id ~/.local/bin/i3exit suspend, mode "default"
+        bindsym h exec --no-startup-id ~/.local/bin/i3exit hibernate, mode "default"
+        bindsym r exec --no-startup-id ~/.local/bin/i3exit reboot, mode "default"
+        bindsym Delete exec --no-startup-id ~/.local/bin/i3exit shutdown, mode "default"
+
+# back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym control+mod1+Delete mode "$mode_system"
 
 # Application keybinding
 bindsym $mod+b exec chromium
 
 exec --no-startup-id feh --bg-scale ~/.wallpapers/1920x1080.png
+exec_always source ~/.bashrc
