@@ -9,7 +9,8 @@
 /.pki/
 /.ssh/
 /.gnome/
-/.viminfo
+/.viminfo*
+/.feh*
 /.local/share/
 
 /.config/aurman/
