@@ -15,7 +15,7 @@ alias la='ls -a'
 alias lla='ls -a -l'
 
 alias cpv="rsync -ah --progress"
-alias vim='gvim -v'
+alias vim='vim'
 
 alias o='xdg-open &>/dev/null'
 alias cclip='xclip -selection clipboard'
