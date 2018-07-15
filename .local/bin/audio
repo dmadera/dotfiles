@@ -12,7 +12,7 @@ down)
 	pactl set-sink-volume @DEFAULT_SINK@ -10%
 	;;
 mute)
-	pactl set-sink-volume @DEFAULT_SINK@ toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 	;;
 list-devices)
 	pacmd list-sources | grep -e 'index:' -e device.string -e device.description -e alsa.mixer_name -e 'name:' -e volume
