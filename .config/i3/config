@@ -155,8 +155,8 @@ bar {
 }
 
 # Multimedia keys - brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id ~/.local/bin/brightness up
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/.local/bin/brightness down
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo ~/.local/bin/brightness up
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo ~/.local/bin/brightness down
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/audio up
