@@ -183,6 +183,6 @@ mode "$mode_system" {
 bindsym control+mod1+Delete mode "$mode_system"
 
 # Application keybinding
-bindsym $mod+b exec chromium-browser
+bindsym $mod+b exec google-chrome-stable
 
 exec --no-startup-id feh --bg-scale ~/.wallpapers/1920x1080.png

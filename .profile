@@ -21,5 +21,4 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-
-xinput set-prop 'ETPS/2 Elantech Touchpad' 298 1
+xinput set-prop 'ETPS/2 Elantech Touchpad' 299 1
