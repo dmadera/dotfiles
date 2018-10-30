@@ -1,6 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 [[ $- != *i* ]] && return
 
+# turn off speaker beeping
+xset b off
+
 # autocomplete for sudo commands
 complete -cf sudo
 
