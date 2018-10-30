@@ -1,4 +1,11 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
+[[ $- != *i* ]] && return
+
+# autocomplete for sudo commands
+complete -cf sudo
+
+# check terminal size on regaining control (focus)
+shopt -s checkwinsize
 
 # history
 shopt -s histappend
