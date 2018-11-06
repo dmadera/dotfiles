@@ -1,0 +1,426 @@
+    1  sudo pacman -Sy urxvt-unicode
+    2  sudo pacman -Sy vim gvim
+    3  yourt -Sy google-chrome
+    4  yaourt -Sy google-chrome
+    5  yaourt
+    6  su
+    7  su
+    8  yaourt
+    9  sudo pacman -Sy yaourt
+   10  yaourt -Sy google-chrome
+   11  exit
+   12  su
+   13  rxvt
+   14  urxvt
+   15  ssh-keygen
+   16  cat .ssh/id_rsa.pub 
+   17  cd Downloads/
+   18  ls
+   19  git clone git@github.com:/dmadera/dotfiles.git
+   20  cd dotfiles/
+   21  ls
+   22  ll
+   23  ls
+   24  ls -al
+   25  cd  .local/bin/
+   26  rn monswitch i3exit brightness audio 
+   27  rm monswitch i3exit brightness audio 
+   28  cd ..
+   29  ls
+   30  ll -a
+   31  ls -a
+   32  cd ..
+   33  ls -al
+   34  ls .config/
+   35  cd .config/
+   36  ls 
+   37  rm fontconfig/ i3* mimeapps.list -rf
+   38  cd ..
+   39  ls -al
+   40  cat .profile 
+   41  cat ~/.profile 
+   42  ls
+   43  ls
+   44  rm .wallpapers/ -rf
+   45  cat .bash_aliases 
+   46  cat .bash_profile 
+   47  cat ~/.bash_profile 
+   48  rm .bash_profile 
+   49  ls
+   50  ls -a
+   51  cat .bash_logout 
+   52  rm .bash_logout 
+   53  ls
+   54  ll
+   55  ls -al
+   56  git status
+   57  git add . -A
+   58  git commit
+   59  git config --global user.email "madera.dan@gmail.com"
+   60  git config --global user.name "Daniel Maděra"
+   61  git commit
+   62  git push origin master
+   63  cd ..
+   64  rm dotfiles/ -rf
+   65  ls
+   66  cd ,,
+   67  cd ..
+   68  ls
+   69  mv Desktop/ desktop
+   70  rm -rf Documents/ Public/ Templates/ Videos/
+   71  ls
+   72  mv Downloads/ downloads
+   73  mv Music/ media/
+   74  mv Pictures/ media/pictures
+   75  ks
+   76  ls media/pictures/
+   77  ls
+   78  git status
+   79  git init
+   80  git remote add origin git@github.com:/dmadera/dotfiles.git
+   81  git pull
+   82  git pull origin master
+   83  rm .bash .config/user-dirs.* .gitconfig .profile 
+   84  rm .bashrc .config/user-dirs.* .gitconfig .profile 
+   85  rm .bashrc .config/user-dirs.* .gitconfig .profile 
+   86  git pull origin master
+   87  git submodule update --init --recursive
+   88  cat .vimrc 
+   89  exit
+   90  ls
+   91  sudo pacman -Sy bash_completion
+   92  sudo pacman -Sy bashcompletion
+   93  sudo pacman -Sy bash-completion
+   94  exit
+   95  exit
+   96  vim .profile 
+   97  git status
+   98  git add .profile 
+   99  git commit
+  100  git push origin master
+  101  exit
+  102  cat .bashrc 
+  103  vim .bashrc 
+  104  git status
+  105  git add .bashrc 
+  106  git commit
+  107  git push origin master
+  108  vim .Xdefaults 
+  109  exit
+  110  yaourt -S teamviewer
+  111  doplhin
+  112  exit
+  113  git status
+  114  git add .Xdefaults 
+  115  git commit 
+  116  git push origin master
+  117  su -
+  118  dolphin 
+  119  exit
+  120  teamviewer
+  121  blkid /dev/sdx
+  122  blkid /dev/sda3
+  123  blkid /dev/sda4
+  124  blkid /dev/sda
+  125  blkid /dev/sda1
+  126  blkid /dev/sda2
+  127  blkid /dev/sda3
+  128  blkid /dev/sda4
+  129  dmraid -rE
+  130  ls
+  131  cat .profile 
+  132  ls
+  133  xinit
+  134  cat ~/.local/share/xorg/Xorg.0.log 
+  135  cat ~/.local/share/xorg/Xorg.0.log 
+  136  systemctl status lightdm
+  137  startx
+  138  ls
+  139  update-grub
+  140  su
+  141  cat .xinitrc 
+  142  vim .bash_profile 
+  143  exit
+  144  ls
+  145  startx
+  146  blkid /dev/sda
+  147  blkid /dev/sda3 
+  148  blkid /dev/sda4
+  149  sudo blkid /dev/sda4
+  150  su
+  151  vim .bash_profile 
+  152  vim .profile 
+  153  exit
+  154  startx
+  155  exit
+  156  cat .bashrc 
+  157  cat .xinitrc 
+  158  exit
+  159  ls
+  160  ll
+  161  ls -al
+  162  ll
+  163  cat .profile 
+  164  git pull origin master -f
+  165  git reset HEAD .profile
+  166  git reset HEAD .profile
+  167  cat .profile 
+  168  cat .bashrc 
+  169  git status
+  170  git checkout -- .profile
+  171  cat .profile 
+  172  exit
+  173  vim /home/test/.bashrc
+  174  sudo vim /home/test/.bashrc
+  175  cat .bashrc 
+  176  vim .bashrc 
+  177  git checkout -- .bashrc
+  178  vim .bashrc 
+  179  git checkout -- .bashrc
+  180  source .bashrc 
+  181  source .bash_aliases 
+  182  vim .bashrc 
+  183  exit
+  184  su
+  185  exit
+  186  vim .bashrc 
+  187  logout
+  188  exit
+  189  git status
+  190  git add .bashrc 
+  191  git commuit
+  192  git commit
+  193  git push origin master
+  194  vim .xinitrc 
+  195  setterm -blength 0
+  196  set bell-style none
+  197  set visualbell
+  198  echo 'set bell-style none' >> ~/.inputrc
+  199  exit
+  200  cat .inputrc 
+  201  git status
+  202  git add .inputrc 
+  203  git commit
+  204  git push origin maste
+  205  git push origin master
+  206  echo '' > .inputrc 
+  207  xset b off
+  208  exit
+  209  vim .bashrc 
+  210  exit
+  211  xset b off
+  212  vim .bashrc 
+  213  rm .inputrc 
+  214  exit
+  215  exit
+  216  sudo pacman -R yakuake 
+  217  sudo pacman -R steam 
+  218  sudo pacman -R steam
+  219  sudo pacman -R steamdeps 
+  220  exit
+  221  exti
+  222  exit
+  223  git status
+  224  git add .bashrc .inputrc 
+  225  git commit
+  226  git push origin master
+  227  exit
+  228  sudo pacman -S budgie-desktop network-manager-applet gnome-control-center gnome-screensaver
+  229  /usr/bin/cp -rf /etc/skel/. ~
+  230  exit
+  231  exit
+  232  exit
+  233  ls
+  234  ll
+  235  ls -al
+  236  cat .bashrc 
+  237  sudo pacman -Ry budgie-desktop network-manager-applet gnome-control-center gnome-screensaver
+  238  sudo pacman -R budgie-desktop network-manager-applet gnome-control-center gnome-screensaver
+  239  git status
+  240  git checkout master
+  241  git checkout .bashrc
+  242  git checkout .profile
+  243  git checkout .config/user-dirs.
+  244  git checkout .config/user-dirs.dirs 
+  245  git status
+  246  exit
+  247  exit
+  248  sudo pacman -R octopi*
+  249  sudo pacman -R octopi
+  250  sudo pacman -R octopi-cachecleaner octopi-notifier octopi-repoeditor 
+  251  sudo pacman -R octopi-cachecleaner octopi-repoeditor 
+  252  userdel test
+  253  userdel test
+  254  sudo userdel test
+  255  exit
+  256  su
+  257  su
+  258  exit
+  259  lsblk
+  260  exit
+  261  ls
+  262  su
+  263  exit
+  264  su
+  265  reboot
+  266  ssh-savana 
+  267  exit
+  268  exit
+  269  ěššěčěšýžáříáýíýážíž
+  270  žáýížýáížýížý
+  271  exit
+  272  fc-list -v
+  273  :q
+  274  exit
+  275  exit
+  276  ls
+  277  ll
+  278  lla
+  279  cat .urxvt/
+  280  ls .urxvt/
+  281  ls .urxvt/
+  282  rm .urxvt/
+  283  rm .urxvt/ -r
+  284  exit
+  285  xrdb -merge ~/.Xresources
+  286  touch .Xresources
+  287  xrdb -merge ~/.Xresources
+  288  exit
+  289  ls
+  290  exit
+  291  xrdb -load ~/.Xdefaults
+  292  xrdb -load ~/.Xdefaults
+  293  xrdb -load ~/.Xdefaults
+  294  exit
+  295  xrdb -load ~/.Xdefaults
+  296  vim .bashrc 
+  297  exit
+  298  exit
+  299  exit
+  300  exit
+  301  exit
+  302  exit
+  303  exit
+  304  exit
+  305  exit
+  306  cat .bash_aliases 
+  307  vim .Xdefaults 
+  308  vim .Xdefaults 
+  309  exit
+  310  cat .xinitrc 
+  311  exit
+  312  rm .Xresources 
+  313  ls
+  314  ls 
+  315  cd downloads/;
+  316  vim a_obrazky.php 
+  317  vim a_obrazky.php 
+  318  exit
+  319  cd downloads/
+  320  vim a_menushop.php 
+  321  exit
+  322  cd downloads/
+  323  l
+  324  vim a_menushop.php 
+  325  vim a_menushop.php 
+  326  :q
+  327  exit
+  328  cd downloads/
+  329  ls
+  330  rm windows-10-sklad.ova 
+  331  sudo pacman -Sy virtualbox-ext
+  332  passwd
+  333  passwd root
+  334  sudo passwd root
+  335  printf
+  336  printenv 
+  337  printafm 
+  338  sudo usermod -a -G sys dmadera
+  339  ping 192.168.5.53
+  340  pacman -Qs ttf
+  341  fc-match
+  342  fc-match Sans
+  343  fc-match "Sans Serif"
+  344  fc-match Helvetica
+  345  vim .config/fontconfig/fonts.conf
+  346  rm .config/fontconfig/fonts.conf 
+  347  sudo pacman -S ttf-bitstream-vera ttf-inconsolata ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-linux-libertine ttf-liberation
+  348  yaourt -S ttf-ms-fonts ttf-vista-fonts monaco-linux-font ttf-qurancomplex-fonts 
+  349  yaourt -S ttf-ms-fonts ttf-vista-fonts ttf-qurancomplex-fonts 
+  350  sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
+  351  sudo gedit /etc/pacman.conf
+  352  sudo vim /etc/pacman.conf 
+  353  sudo vim /etc/pacman.conf 
+  354  sudo pacman -Syy infinality-bundle infinality-bundle-multilib
+  355  sudo vim /etc/pacman.conf 
+  356  sudo pacman -Sy
+  357  yaourt freetype2-ubuntu fontconfig-ubuntu cairo-ubuntu
+  358  yaourt freetype2-ubuntu fontconfig-ubuntu cairo-ubuntu
+  359  yaourt -Syy freetype2-ubuntu fontconfig-ubuntu cairo-ubuntu
+  360  yaourt -Sy freetype2-ubuntu fontconfig-ubuntu cairo-ubuntu
+  361  yaourt -Sy fontconfig-ubuntu cairo-ubuntu
+  362  exit
+  363  ttf-croscore
+  364  sudo pacman -Sy ttf-croscore
+  365  mkdir .config/fontconfig
+  366    sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
+  367    sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
+  368    sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
+  369    sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
+  370  /etc/profile.d/freetype2.sh
+  371  sudo vim /etc/fonts/fonts.
+  372  sudo vim /etc/fonts/fonts.conf 
+  373  sudo vim /etc/fonts/local.conf
+  374  su
+  375    sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
+  376  sudo pacman -Sy ttf-croscore
+  377  sudo vim /etc/fonts/local.conf
+  378  sudo pacman -Sy ttf-croscore
+  379  sudo pacman -Sy ttf-croscore
+  380    sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
+  381  sudo vim /etc/fonts/fonts.conf 
+  382  sudo rm /etc/fonts/local.conf 
+  383  sudo usermod -a -G lp dmadera
+  384  lp
+  385  vim .fonts.conf
+  386  reboot
+  387  sudo pacman -Sy cupsenable cupsctl 
+  388  sudo pacman -Sy cupsenable
+  389  systemctl enable cups-browsed.service
+  390  sudo pacman -Sy manjaro-print print-manager
+  391  sudo pacman -Sy print-manager
+  392  sudo usermod -a -G printadmin dmadera
+  393  lpinfo -v
+  394  sudo systemctl enable org.cups.cupsd.service
+  395  sudo pacman -Sy manjaro-printer
+  396  sudo systemctl enable org.cups.cupsd.service
+  397  sudo systemctl start org.cups.cupsd.service
+  398  sudo systemctl restart org.cups.cupsd.service
+  399  sudo systemctl restart org.cups.cupsd.service
+  400  sudo systemctl restart org.cups.cupsd.service
+  401  sudo systemctl daemon-reload
+  402  sudo chgrp -R cups /etc/cups
+  403  cd downloads/
+  404  ls
+  405  ls
+  406  extract linux-UFRII-drv-v360-uken-02.tar.gz
+  407  mkdir linux-UFRII-drv-v360-uken-02
+  408  cd linux-UFRII-drv-v360-uken-02/
+  409  extract ../linux-UFRII-drv-v360-uken-02.tar.gz 
+  410  tar zxfv ../linux-UFRII-drv-v360-uken-02
+  411  tar zxfv ../linux-UFRII-drv-v360-uken-02.tar.gz linux-UFRII-drv-v360-uken/
+  412  půs
+  413  ls
+  414  cd linux-UFRII-drv-v360-uken
+  415  ls
+  416  ./install.sh 
+  417  su - 
+  418  cd ~/downloads/
+  419  ls
+  420  rm yello-energy-*
+  421  reboot
+  422  su -
+  423  exit
+  424  history
+  425  cd downloads/
+  426  history > manjaro-packages
