@@ -22,4 +22,6 @@
 /.config/teamviewer/
 
 /downloads/
-/workspace/
+/workspace
+.vim/.netrwhist
+.wget-hssts

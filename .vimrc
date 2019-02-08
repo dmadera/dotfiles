@@ -3,7 +3,7 @@ set nocompatible
 " Pathogen win package manager
 execute pathogen#infect()
 
-colorscheme solarized
+"colorscheme solarized
 set directory^=$HOME/.vim/tmp//
 filetype on
 filetype plugin on
@@ -11,8 +11,8 @@ filetype indent on
 syntax on
 
 set background=dark
-set cursorline
-set colorcolumn=80
+"set cursorline
+"set colorcolumn=80
 set number
 set clipboard=unnamed
 set history=500
