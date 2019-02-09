@@ -38,7 +38,7 @@ BBlue='\033[1;34m'        # Blue
 BPurple='\033[1;35m'      # Purple
 BCyan='\033[1;36m'        # Cyan
 BWhite='\033[1;37m'       # White
-export PS1="${BBlue}[\A] ${BGreen}\u${Cyan}@${BGreen}\h:${BCyan}\w\n${BPurple}> ${Color_Off}"
+export PS1="\[${BBlue}\][\A] \[${BGreen}\]\u\[${Cyan}\]@\[${BGreen}\]\h:\[${BCyan}\]\w \n\[${BPurple}\]> \[${Color_Off}\]"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Tab Completions
