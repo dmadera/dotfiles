@@ -19,4 +19,3 @@ alias vim='vim'
 
 alias o='xdg-open &>/dev/null'
 alias cclip='xclip -selection clipboard'
-alias ssh-savana='ssh user@ssh.pemalbc.savana-hosting.cz -p 9108'
