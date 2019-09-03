@@ -23,7 +23,7 @@ if [[ ! -d "$filename" ]]; then
     mkdir "$filename"
 fi
 
-d=$filename
+d=$(echo "$filename" | cut -f 1 -d '.')
 
 case "${filename##*.}" in
     tar)
