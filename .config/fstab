@@ -1,0 +1,17 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p6
+UUID=ec15cd68-44cb-4e32-b85b-6e315994d44a / ext4 rw,relatime 0 1
+
+# /dev/nvme0n1p1 LABEL=SYSTEM
+UUID=40F7-0653 /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 2
+
+# /dev/nvme0n1p4
+UUID=c40a2f3c-e3cc-45ed-ace6-1535cd0e97c9 none swap defaults 0 0
+
+# /dev/nvme0n1p6
+/dev/nvme0n1p6 /mnt/gdrive ntfs-3g uid=dmadera,gid=dmadera,dmask=022,fmask=133 0 0
+
+sshfs#user@savana:/mnt/data/accounts/p/pemalbc/data/www /mnt/savana fuse user,allow_other,noauto,_netdev 0 0
