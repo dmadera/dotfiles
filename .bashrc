@@ -54,3 +54,4 @@ export CDPATH=.:/run/user/1000/gvfs/
 export PATH=$PATH:~/.local/bin/:/usr/local/cuda/bin/
 
 source ~/.bash_aliases
+export PATH="$PATH:/opt/mssql-tools/bin"
