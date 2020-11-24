@@ -40,6 +40,9 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 " able to write to sysstem file with sudo password
 cmap w!! %!sudo tee > /dev/null %
 
+" yanke to shared clipboard
+set clipboard=unnamedplus
+
 " remove whitepaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
