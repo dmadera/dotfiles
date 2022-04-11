@@ -8,6 +8,7 @@
 /.npm/
 /.pki/
 /.ssh/
+/.cert/
 /.gnome/
 /.viminfo*
 /.feh*
