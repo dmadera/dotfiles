@@ -55,3 +55,11 @@ export PATH=$PATH:~/.local/bin/:/usr/local/cuda/bin/
 
 source ~/.bash_aliases
 export PATH="$PATH:/opt/mssql-tools/bin"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
+export PROJECT_HOME=$HOME/projects
+source /usr/local/bin/virtualenvwrapper.sh
+export PATH="$PATH:/opt/mssql-tools18/bin"
+export PATH="$PATH:/opt/mssql-tools18/bin"
